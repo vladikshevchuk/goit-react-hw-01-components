@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { TableRow, TableLine } from './TransactionHistory.styled';
 
 export default function Transaction({type, amount, currency}) {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableLine>
+      <TableRow>{type}</TableRow>
+      <TableRow>{amount}</TableRow>
+      <TableRow>{currency}</TableRow>
+    </TableLine>
   );
 }
 

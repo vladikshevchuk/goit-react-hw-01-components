@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
+import { Item, UserName, Status } from './Friend.styled';
 
 export default function Friend({ isOnline, avatar, name }) {
   return (
-    <li className="item">
-          <span className="status">{ isOnline }</span>
+    <Item>
+      <Status isOnline={isOnline}></Status>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
+      <UserName>{name}</UserName>
+    </Item>
   );
 }
 
 Friend.propTypes = {
-    isOnline: PropTypes.bool.isRequired,
-    avatar: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-}
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
